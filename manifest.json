@@ -1,0 +1,69 @@
+{
+  "id": "jalali-desktop-calendar",
+  "name": "Jalali Desktop Calendar",
+  "version": "0.1.0",
+  "author": "Amir M. Mahmoudi \u003cmahmoudi.amirmahmoud@gmail.com\u003e",
+  "description": "A right-to-left Jalali (Solar Hijri) month calendar for the Ryoku desktop, with week numbers, Gregorian dates and Iran's fixed official holidays.",
+  "license": "MIT",
+  "official": false,
+  "hosts": [
+    "desktopWidget"
+  ],
+  "entryPoints": {
+    "main": "service/Main.qml",
+    "content": "content/Widget.qml"
+  },
+  "files": [
+    "service/jalali.js",
+    "assets/preview-widget.png"
+  ],
+  "capabilities": {
+    "densities": [
+      "compact",
+      "full"
+    ],
+    "colors": true
+  },
+  "defaults": {
+    "host": "desktopWidget",
+    "label": "Jalali Desktop Calendar",
+    "desktopWidget": {
+      "bg": "glass"
+    }
+  },
+  "dependencies": {
+    "commands": []
+  },
+  "metadata": {
+    "settings": [
+      {
+        "key": "persianDigits",
+        "type": "toggle",
+        "label": "Persian digits",
+        "group": "Jalali Desktop Calendar",
+        "default": true
+      },
+      {
+        "key": "showWeekNumbers",
+        "type": "toggle",
+        "label": "Week numbers",
+        "group": "Jalali Desktop Calendar",
+        "default": true
+      },
+      {
+        "key": "showGregorian",
+        "type": "toggle",
+        "label": "Gregorian dates",
+        "group": "Jalali Desktop Calendar",
+        "default": true
+      },
+      {
+        "key": "showHolidays",
+        "type": "toggle",
+        "label": "Official holidays",
+        "group": "Jalali Desktop Calendar",
+        "default": true
+      }
+    ]
+  }
+}
